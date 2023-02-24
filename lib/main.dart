@@ -5,7 +5,7 @@ import 'firebase_options.dart';
 import 'package:get/get.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-Future<void> main() async{
+Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
@@ -20,15 +20,15 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-        builder: (BuildContext context,Widget? child)=>GetMaterialApp(
-          title: 'Flutter Demo',
-          debugShowCheckedModeBanner: false,
-          theme: ThemeData(
-            primarySwatch: Colors.blue,
-          ),
-          initialRoute: AppPages.INITIAL,
-          getPages: AppPages.routes,
+      builder: (BuildContext context, Widget? child) => GetMaterialApp(
+        title: 'Flutter Demo',
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
         ),
+        initialRoute: AppPages.INITIAL,
+        getPages: AppPages.routes,
+      ),
     );
   }
 }
