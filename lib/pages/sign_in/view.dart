@@ -1,3 +1,4 @@
+import 'package:firebase_chat/common/widgets/button.dart';
 import 'package:firebase_chat/pages/sign_in/controller.dart';
 import 'package:firebase_chat/pages/welcome/controller.dart';
 import 'package:flutter/cupertino.dart';
@@ -45,7 +46,49 @@ class SignInPage extends GetView<SignInController> {
                   ),
                 ],
               ),
+            ),
+            Container(
+              margin: EdgeInsets.only(top: 15, bottom: 15),
+              child: Text(
+                "Let's chat",
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                    color: AppColors.thirdElement,
+                    fontWeight: FontWeight.w600,
+                    fontSize: 18),
+              ),
             )
+          ],
+        ),
+      );
+    }
+
+    Widget _buildThirdPartyLogin() {
+      return Container(
+        width: 295,
+        margin: EdgeInsets.only(bottom: 280),
+        child: Column(
+          children: [
+            Text(
+              "Sign in with social networks",
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                  color: AppColors.primaryText,
+                  fontWeight: FontWeight.w400,
+                  fontSize: 16),
+            ),
+            Padding(
+              padding: EdgeInsets.only(
+                top: 30,
+                left: 50,
+                right: 50,
+              ),
+              child: btnFlatButtonWidget(
+                  onPressed: (){controller.handleSignIn();},
+                  width: 200,
+                  height: 55,
+                  title: "Google Login"),
+            ),
           ],
         ),
       );
@@ -53,11 +96,9 @@ class SignInPage extends GetView<SignInController> {
 
     return Scaffold(
         body: Center(
-          child: Column(
-            children: [
-              _buildLogo()
-            ],
-          ),
-        ));
+      child: Column(
+        children: [_buildLogo(), Spacer(), _buildThirdPartyLogin()],
+      ),
+    ));
   }
 }
