@@ -34,6 +34,5 @@ Run the following commands from your terminal:
     <tr>
       <td width="1%"><img src="https://github.com/sachinv26/Tango-A-Community-App/assets/76443132/ff09a2f1-cfa6-4200-b1c9-e3d4d2243c9a"/></td>
       <td width="1%"><img src="https://github.com/sachinv26/Tango-A-Community-App/assets/76443132/ca7bfc4f-605e-49a6-8539-55306f8b6489"/></td>
-       <td width="1%"><img src="https://github.com/sachinv26/Tango-A-Community-App/assets/76443132/ca7bfc4f-605e-49a6-8539-55306f8b6489"/></td>
     </tr>
   </tbody>
